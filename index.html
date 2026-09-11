@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Realna Angielski – Katarzyna Dąbrowska. Wymagania edukacyjne, zasady oceniania i materiały do nauki.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Realna Angielski – Katarzyna Dąbrowska. Wymagania edukacyjne, zasady oceniania i materiały do nauki." name="description"/>
 <title>Realna Angielski – Katarzyna Dąbrowska</title>
 <style>
 :root{
@@ -56,73 +57,86 @@ details ul{margin-top:.25em}
 footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 @media(max-width:860px){.intro{grid-column:span 12}.classcard{grid-column:span 6}.half{grid-column:span 12}}
 @media(max-width:560px){.classcard{grid-column:span 12}.navlinks{display:none}.hero{padding-top:48px}}
+
+.materials-layout{margin-top:4px}
+.materials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.material-panel,.grammar-panel{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.material-panel>summary,.grammar-panel>summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;flex-direction:column;gap:8px;position:relative}
+.material-panel>summary::-webkit-details-marker,.grammar-panel>summary::-webkit-details-marker{display:none}
+.material-panel>summary:after{content:'+';position:absolute;right:22px;top:22px;width:30px;height:30px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:20px;font-weight:700;color:#64748b}
+.material-panel[open]>summary:after{content:'–'}
+.material-summary-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-right:42px}
+.material-summary-top h3{margin:0;font-size:22px}
+.material-topic{margin:2px 40px 0 0;color:var(--ink);font-weight:700;line-height:1.45}
+.material-status{font-size:13px;color:var(--muted);font-weight:650}
+.material-content{border-top:1px solid var(--line);padding:14px 24px 24px}
+.material-content>details{margin-top:10px}
+.grammar-panel{margin-top:18px}
+.grammar-panel>summary{flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:24px 26px}
+.grammar-panel>summary h3{margin:2px 0 4px;font-size:25px}
+.grammar-panel>summary p{margin:0;max-width:760px}
+.hub-open{flex:0 0 auto;background:var(--ink);color:#fff;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:800}
+.grammar-panel[open] .hub-open{font-size:0}
+.grammar-panel[open] .hub-open:after{content:'Zamknij';font-size:13px}
+.grammar-panel-content{border-top:1px solid var(--line);padding:22px 26px 26px}
+@media(max-width:760px){.materials-grid{grid-template-columns:1fr}.grammar-panel>summary{align-items:flex-start;flex-direction:column}.hub-open{margin-top:2px}}
 </style>
 </head>
 <body>
-
 <header>
 <div class="wrap">
 <nav>
-  <div class="brand">Realna Angielski – Katarzyna Dąbrowska <span>• 2026/27</span></div>
-  <div class="navlinks">
-    <a href="#wymagania">Wymagania</a>
-    <a href="#ocenianie">Ocenianie</a>
-    <a href="#materialy">Materiały</a>
-  </div>
+<div class="brand">Realna Angielski – Katarzyna Dąbrowska <span>• 2026/27</span></div>
+<div class="navlinks">
+<a href="#wymagania">Wymagania</a>
+<a href="#ocenianie">Ocenianie</a>
+<a href="#materialy">Materiały</a>
+</div>
 </nav>
 </div>
 </header>
-
 <main>
 <div class="wrap">
-
 <section class="hero">
-  <div class="eyebrow">Język angielski</div>
-  <h1>Wymagania, ocenianie<br>i materiały do nauki</h1>
-  <p>W jednym miejscu: zasady zaliczania, wymagania edukacyjne, szczegółowe kryteria oceniania wypowiedzi ustnych i pisemnych oraz materiały uporządkowane według klas i grup.</p>
-  <div class="actions">
-    <a class="btn primary" href="#ocenianie">Zobacz zasady oceniania</a>
-    <a class="btn" href="#materialy">Przejdź do materiałów</a>
-  </div>
+<div class="eyebrow">Język angielski</div>
+<h1>Wymagania, ocenianie<br/>i materiały do nauki</h1>
+<p>W jednym miejscu: zasady zaliczania, wymagania edukacyjne, szczegółowe kryteria oceniania wypowiedzi ustnych i pisemnych oraz materiały uporządkowane według klas i grup.</p>
+<div class="actions">
+<a class="btn primary" href="#ocenianie">Zobacz zasady oceniania</a>
+<a class="btn" href="#materialy">Przejdź do materiałów</a>
+</div>
 </section>
-
 <section>
 <div class="grid">
-  <div class="card intro"><span class="tag">OCENIANIE</span><h3>Informacja opisowa</h3><p class="muted">W ciągu roku informacja o osiągnięciach ucznia ma przede wszystkim charakter opisowy.</p></div>
-  <div class="card intro"><span class="tag">PÓŁROCZE</span><h3>ZAL / NZAL</h3><p class="muted">Warunkiem ZAL jest zaliczenie wszystkich obowiązkowych form na minimum 60%.</p></div>
-  <div class="card intro"><span class="tag">KONIEC ROKU</span><h3>Ocena 1–6</h3><p class="muted">Ocena końcoworoczna wynika ze stopnia spełnienia wymagań edukacyjnych i nie jest prostą średnią.</p></div>
+<div class="card intro"><span class="tag">OCENIANIE</span><h3>Informacja opisowa</h3><p class="muted">W ciągu roku informacja o osiągnięciach ucznia ma przede wszystkim charakter opisowy.</p></div>
+<div class="card intro"><span class="tag">PÓŁROCZE</span><h3>ZAL / NZAL</h3><p class="muted">Warunkiem ZAL jest zaliczenie wszystkich obowiązkowych form na minimum 60%.</p></div>
+<div class="card intro"><span class="tag">KONIEC ROKU</span><h3>Ocena 1–6</h3><p class="muted">Ocena końcoworoczna wynika ze stopnia spełnienia wymagań edukacyjnych i nie jest prostą średnią.</p></div>
 </div>
 </section>
-
 <section id="ocenianie">
 <div class="section-head">
-  <div><div class="eyebrow">Zasady ogólne</div><h2>Formy pracy podlegające ocenianiu</h2></div>
-  <p>W tej części znajdują się ogólne zasady. Szczegółowe kryteria mówienia i pisania opisano osobno poniżej.</p>
+<div><div class="eyebrow">Zasady ogólne</div><h2>Formy pracy podlegające ocenianiu</h2></div>
+<p>W tej części znajdują się ogólne zasady. Szczegółowe kryteria mówienia i pisania opisano osobno poniżej.</p>
 </div>
 <div class="card">
-
-<details open>
+<details>
 <summary>Prace pisemne: kartkówki i sprawdziany</summary>
 <p><strong>Kartkówka:</strong> obejmuje materiał z 3 ostatnich lekcji (nie musi być zapowiedziana) lub z określonego zakresu materiału (zapowiedziana).</p>
 <p><strong>Sprawdzian:</strong> obejmuje materiał z 1–2 rozdziałów i jest zapowiadany z tygodniowym wyprzedzeniem. Uczeń, który nie pisał pracy w terminie, ustala termin zaliczenia zaległego materiału w porozumieniu z nauczycielem.</p>
 <p>W przypadku niesamodzielnego pisania pracy uczeń otrzymuje ocenę niedostateczną i może pisać pracę ponownie po ustaleniu nowego terminu.</p>
 </details>
-
 <details>
 <summary>Wypowiedzi ustne</summary>
 <p>Wypowiedzi ustne oceniane są z uwzględnieniem rodzaju, zakresu i celu zadania. Szczegółowe kryteria znajdują się w części <a href="#ustna"><strong>„Ocenianie wypowiedzi ustnych”</strong></a>.</p>
 </details>
-
 <details>
 <summary>Wypowiedzi pisemne</summary>
 <p>Wypowiedzi pisemne oceniane są z uwzględnieniem rodzaju, zakresu i celu zadania. Szczegółowe kryteria znajdują się w części <a href="#pisemna"><strong>„Ocenianie wypowiedzi pisemnych”</strong></a>, z podziałem na poziom podstawowy i rozszerzony.</p>
 </details>
-
 <details>
 <summary>Projekty i inne formy zaliczenia</summary>
 <p>Oceniane są według kryteriów ustalonych i udostępnionych uczniom przez dziennik elektroniczny.</p>
 </details>
-
 <details>
 <summary>Aktywność i stosunek do obowiązków szkolnych</summary>
 <ul>
@@ -137,9 +151,7 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <li>zaangażowanie i wysiłek włożony w wykonanie zadania.</li>
 </ul>
 </details>
-
 </div>
-
 <div class="card" style="margin-top:18px">
 <h3>Zasady zaliczania</h3>
 <div class="notice"><strong>Każda obowiązkowa forma sprawdzania wiadomości i umiejętności musi być zaliczona na minimum 60%.</strong></div>
@@ -149,20 +161,16 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <p>W klasach I–II informacja o osiągnięciach ma przede wszystkim charakter opisowy. Od klasy III, w grupach realizujących język angielski w zakresie rozszerzonym, przy wybranych formach może być dodatkowo stosowana punktacja i/lub wynik procentowy, szczególnie w zadaniach przygotowujących do egzaminu maturalnego.</p>
 </div>
 </section>
-
 <section id="ustna">
 <div class="section-head">
-  <div><div class="eyebrow">Szczegółowe kryteria</div><h2>Ocenianie wypowiedzi ustnych</h2></div>
-  <p>Kryteria są dostosowane do rodzaju zadania. Nie każda wypowiedź musi być oceniana we wszystkich obszarach.</p>
+<div><div class="eyebrow">Szczegółowe kryteria</div><h2>Ocenianie wypowiedzi ustnych</h2></div>
+<p>Kryteria są dostosowane do rodzaju zadania. Nie każda wypowiedź musi być oceniana we wszystkich obszarach.</p>
 </div>
-
 <div class="card">
 <p>Wypowiedzi ustne oceniane są z uwzględnieniem <strong>rodzaju, zakresu i celu wykonywanego zadania</strong>. W zależności od rodzaju wypowiedzi ocenie mogą podlegać: sprawność komunikacyjna, zakres środków leksykalno-gramatycznych, poprawność środków leksykalno-gramatycznych, wymowa oraz płynność wypowiedzi.</p>
-
 <div class="subnav">
-<a class="chip" href="https://maturaangielski.org/matura-ustna-angielski-punktacja" target="_blank" rel="noopener noreferrer">Dodatkowe objaśnienia do matury ustnej ↗</a>
+<a class="chip" href="https://maturaangielski.org/matura-ustna-angielski-punktacja" rel="noopener noreferrer" target="_blank">Dodatkowe objaśnienia do matury ustnej ↗</a>
 </div>
-
 <h4>Sprawność komunikacyjna</h4>
 <p>Oceniana jest pod kątem realizacji zadania. Bierze się pod uwagę:</p>
 <ul>
@@ -171,52 +179,43 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <li>adekwatność wypowiedzi do tematu i kontekstu rozmowy;</li>
 <li>umiejętność skutecznego przekazywania informacji i reagowania w sytuacji komunikacyjnej.</li>
 </ul>
-
 <h4>Zakres środków leksykalno-gramatycznych</h4>
 <p><span class="score">4 pkt</span> – szeroki zakres; uczeń swobodnie wypowiada się na tematy proste i złożone, a w wypowiedziach złożonych rzadko opiera się wyłącznie na bardzo pospolitych słowach i strukturach.</p>
 <p><span class="score">3 pkt</span> – zadowalający zakres; uczeń swobodnie wypowiada się na tematy proste i złożone, ale częściej korzysta z pospolitych słów i struktur.</p>
 <p><span class="score">2 pkt</span> – ograniczony zakres; uczeń dość swobodnie wypowiada się na tematy proste, natomiast bardziej złożone sprawiają trudność.</p>
 <p><span class="score">1 pkt</span> – bardzo ograniczony zakres; uczeń ma trudności z wypowiadaniem się nawet na tematy proste.</p>
 <p><span class="score">0 pkt</span> – brak wypowiedzi lub wypowiedź niekomunikatywna.</p>
-
 <h4>Poprawność środków leksykalno-gramatycznych</h4>
 <p><span class="score">4 pkt</span> – sporadyczne błędy, niezakłócające komunikacji.</p>
 <p><span class="score">3 pkt</span> – dość liczne błędy, które nie zakłócają komunikacji lub zakłócają ją czasami.</p>
 <p><span class="score">2 pkt</span> – liczne błędy zakłócające komunikację.</p>
 <p><span class="score">1 pkt</span> – bardzo liczne błędy w znacznym stopniu zakłócające komunikację.</p>
 <p><span class="score">0 pkt</span> – brak wypowiedzi lub wypowiedź niekomunikatywna.</p>
-
 <h4>Wymowa</h4>
 <p>Ocenia się wymowę dźwięków, akcentowanie i intonację oraz ich wpływ na komunikatywność.</p>
 <p><span class="score">2 pkt</span> – brak błędów lub błędy niezakłócające komunikacji.</p>
 <p><span class="score">1 pkt</span> – błędy czasami zakłócają komunikację.</p>
 <p><span class="score">0 pkt</span> – błędy często zakłócają komunikację lub uniemożliwiają zrozumienie; albo brak wypowiedzi / wypowiedź niekomunikatywna.</p>
-
 <h4>Płynność wypowiedzi</h4>
 <p><span class="score">2 pkt</span> – brak pauz lub występują jedynie sporadyczne nienaturalne pauzy, które nie zakłócają odbioru komunikatu.</p>
 <p><span class="score">1 pkt</span> – pauzy są częste i nienaturalne, czasami zakłócają odbiór komunikatu.</p>
 <p><span class="score">0 pkt</span> – pauzy są bardzo częste i nienaturalne, zakłócają odbiór komunikatu; albo brak wypowiedzi / wypowiedź niekomunikatywna.</p>
-
 <h4>Zadania realizowane w formule egzaminu maturalnego</h4>
 <p>W przypadku wypowiedzi ustnych realizowanych w formule części ustnej egzaminu maturalnego stosowane są kryteria zgodne z aktualnymi zasadami oceniania egzaminu maturalnego z języka angielskiego.</p>
 <p>Formuła części ustnej egzaminu maturalnego jest <strong>wprowadzana stopniowo od klasy 1</strong>. Uczniowie sukcesywnie poznają strukturę egzaminu, sposób realizacji poszczególnych zadań, wymagania dotyczące odpowiedzi oraz zasady ich oceniania. W kolejnych klasach zakres pracy w formule maturalnej jest stopniowo rozszerzany.</p>
 <p>Jeżeli uczeń nie przystąpi do realizacji wszystkich zadań w wypowiedzi prowadzonej w formule egzaminu maturalnego, maksymalna liczba punktów możliwych do uzyskania za zakres i poprawność środków leksykalno-gramatycznych, wymowę oraz płynność może zostać ograniczona zgodnie z aktualnymi zasadami oceniania egzaminu maturalnego.</p>
 </div>
 </section>
-
 <section id="pisemna">
 <div class="section-head">
-  <div><div class="eyebrow">Szczegółowe kryteria</div><h2>Ocenianie wypowiedzi pisemnych</h2></div>
-  <p>Pełne kryteria punktowe stosowane są przede wszystkim w zadaniach realizowanych w formule maturalnej.</p>
+<div><div class="eyebrow">Szczegółowe kryteria</div><h2>Ocenianie wypowiedzi pisemnych</h2></div>
+<p>Pełne kryteria punktowe stosowane są przede wszystkim w zadaniach realizowanych w formule maturalnej.</p>
 </div>
-
 <div class="card">
 <p>Wypowiedzi pisemne oceniane są z uwzględnieniem <strong>rodzaju, zakresu i celu zadania</strong>. Nie każda wypowiedź pisemna musi być oceniana według wszystkich poniższych kryteriów. W krótszych zadaniach nauczyciel może wskazać wybrane kryteria podlegające ocenie.</p>
-
-<details open>
+<details>
 <summary>Poziom podstawowy</summary>
 <p>W formule maturalnej uczeń tworzy tekst użytkowy, np. <strong>e-mail, wpis na blogu lub forum internetowym</strong>, o długości <strong>100–150 wyrazów</strong>. Polecenie zawiera cztery elementy treści, które należy zrealizować i możliwie rozwinąć.</p>
-
 <h4>Treść – 0–5 pkt</h4>
 <p>Ocenia się, do ilu elementów polecenia uczeń się odniósł i ile z nich rozwinął. Rozwinięcie oznacza bardziej szczegółową realizację poprzez dodatkowe informacje, szczegóły, wyjaśnienia lub przykłady.</p>
 <p><span class="score">5 pkt</span> – odniesienie do wszystkich czterech elementów i rozwinięcie wszystkich.</p>
@@ -225,35 +224,28 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <p><span class="score">2 pkt</span> – częściowa realizacja treści; uczeń przekazuje informacje odnoszące się do większości wymaganych elementów.</p>
 <p><span class="score">1 pkt</span> – bardzo ograniczona realizacja polecenia.</p>
 <p><span class="score">0 pkt</span> – brak realizacji wymaganych elementów lub realizacja niekomunikatywna.</p>
-
 <h4>Spójność i logika – 0–2 pkt</h4>
 <p><span class="score">2 pkt</span> – wypowiedź jest spójna i logiczna; mogą pojawić się jedynie sporadyczne usterki.</p>
 <p><span class="score">1 pkt</span> – występują dość liczne usterki w spójności i/lub logice.</p>
 <p><span class="score">0 pkt</span> – wypowiedź jest w znacznej mierze niespójna lub nielogiczna.</p>
-
 <h4>Zakres środków językowych – 0–3 pkt</h4>
 <p><span class="score">3 pkt</span> – szeroki zakres środków językowych; liczne precyzyjne sformułowania.</p>
 <p><span class="score">2 pkt</span> – zadowalający zakres; oprócz prostszych środków pojawia się kilka precyzyjnych sformułowań.</p>
 <p><span class="score">1 pkt</span> – ograniczony zakres; dominują proste i bardzo często używane środki językowe.</p>
 <p><span class="score">0 pkt</span> – bardzo ograniczony zakres albo zakres niewystarczający do realizacji polecenia.</p>
-
 <h4>Poprawność środków językowych – 0–2 pkt</h4>
 <p><span class="score">2 pkt</span> – brak błędów lub nieliczne błędy, które nie zakłócają komunikacji albo zakłócają ją sporadycznie.</p>
 <p><span class="score">1 pkt</span> – liczne błędy niezakłócające komunikacji lub czasami ją zakłócające; albo bardzo liczne błędy niezakłócające komunikacji.</p>
 <p><span class="score">0 pkt</span> – liczne błędy często zakłócające komunikację lub bardzo liczne błędy, które czasami lub często ją zakłócają.</p>
-
 <div class="note"><strong>Ważne w formule maturalnej:</strong> wypowiedź krótsza niż 80 wyrazów jest oceniana wyłącznie za treść. 0 pkt za treść oznacza 0 pkt również w pozostałych kryteriach. Przy 1 pkt za treść w każdym z pozostałych kryteriów można otrzymać maksymalnie 1 pkt.</div>
 </details>
-
 <details>
 <summary>Poziom rozszerzony</summary>
 <p>W formule maturalnej uczeń tworzy jeden z tekstów argumentacyjnych: <strong>rozprawkę, artykuł publicystyczny lub list formalny</strong>. Wypowiedź powinna liczyć <strong>200–250 wyrazów</strong>.</p>
 <p><strong>Łącznie: 13 pkt</strong> – zgodność z poleceniem 0–5, spójność i logika 0–2, zakres środków językowych 0–3, poprawność środków językowych 0–3.</p>
-
 <h4>Zgodność z poleceniem – 0–5 pkt</h4>
 <p>Ocenia się zarówno <strong>treść, jak i formę</strong>. Pod uwagę bierze się: właściwy wstęp, realizację pierwszego i drugiego elementu tematu, właściwe zakończenie, brak fragmentów odbiegających od tematu oraz zachowanie cech charakterystycznych dla wybranej formy.</p>
 <p>Najwyżej oceniana jest realizacja <strong>wieloaspektowa i/lub pogłębiona</strong>, np. z argumentami, uzasadnieniami, przykładami i szczegółowym omówieniem. Sama lista argumentów bez rozwinięcia jest oceniana niżej.</p>
-
 <h4>Wymagania charakterystyczne dla formy</h4>
 <ul>
 <li><strong>Rozprawka:</strong> jasna teza zgodna z tematem i argumentacją, umieszczona we wstępie; teza powinna zapowiadać strukturę pracy.</li>
@@ -261,43 +253,35 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <li><strong>List formalny:</strong> we wstępie jasno wskazany cel lub powód napisania listu oraz odpowiedni zwrot rozpoczynający i kończący.</li>
 </ul>
 <p>Zakończenie powinno być zgodne z tematem i treścią wypowiedzi. Jeśli nawiązuje do wstępu, nie powinno go po prostu powtarzać tymi samymi słowami.</p>
-
 <h4>Kompozycja i segmentacja</h4>
 <p>Tekst powinien mieć widoczny zamysł kompozycyjny, odpowiednie proporcje wstępu, rozwinięcia i zakończenia oraz logiczny podział na akapity. Przy ocenie elementów formy CKE bierze również pod uwagę długość pracy mieszczącą się w granicach 180–280 wyrazów.</p>
-
 <h4>Spójność i logika – 0–2 pkt</h4>
 <p><span class="score">2 pkt</span> – najwyżej 2 usterki w spójności i/lub logice.</p>
 <p><span class="score">1 pkt</span> – od 3 do 5 usterek.</p>
 <p><span class="score">0 pkt</span> – 6 lub więcej usterek.</p>
-
 <h4>Zakres środków językowych – 0–3 pkt</h4>
 <p><span class="score">3 pkt</span> – szeroki zakres; liczne fragmenty charakteryzują się naturalnością, różnorodnością frazeologiczną i precyzją.</p>
 <p><span class="score">2 pkt</span> – zadowalający zakres; kilka fragmentów naturalnych, różnorodnych i precyzyjnych, ale w większości używane są bardziej pospolite środki.</p>
 <p><span class="score">1 pkt</span> – ograniczony zakres; dominują proste i pospolite struktury.</p>
 <p><span class="score">0 pkt</span> – bardzo ograniczony zakres albo zakres niewystarczający do realizacji polecenia.</p>
 <p>Na poziomie rozszerzonym szeroki zakres oznacza środki leksykalno-gramatyczne na poziomie <strong>B2 lub wyższym</strong>. Styl powinien być stosowny do formy i konsekwentny; rażące lub liczne uchybienia stylistyczne mogą obniżyć wynik za zakres o 1 punkt.</p>
-
 <h4>Poprawność środków językowych – 0–3 pkt</h4>
 <p>Oceniane są błędy leksykalne, gramatyczne, ortograficzne i interpunkcyjne oraz ich waga i wpływ na komunikację.</p>
 <p><span class="score">3 pkt</span> – nieliczne błędy językowe i nieliczne błędy zapisu.</p>
 <p><span class="score">2 pkt</span> – nieliczne błędy językowe przy licznych/bardzo licznych błędach zapisu albo liczne błędy językowe przy nielicznych błędach zapisu.</p>
 <p><span class="score">1 pkt</span> – liczne błędy językowe i liczne/bardzo liczne błędy zapisu albo bardzo liczne błędy językowe przy nielicznych błędach zapisu.</p>
 <p><span class="score">0 pkt</span> – bardzo liczne błędy językowe i liczne lub bardzo liczne błędy zapisu.</p>
-
 <div class="note"><strong>Ważne w formule maturalnej:</strong> wypowiedź krótsza niż 160 wyrazów jest oceniana wyłącznie za zgodność z poleceniem. 0 pkt za zgodność z poleceniem oznacza 0 pkt w pozostałych kryteriach. Brak rozwinięcia oznacza 0 pkt we wszystkich kryteriach. Przy 1 pkt za zgodność z poleceniem w pozostałych kryteriach można otrzymać maksymalnie 1 pkt.</div>
 </details>
-
 </div>
 </section>
-
 <section id="wymagania">
 <div class="section-head">
-  <div><div class="eyebrow">Klasyfikacja końcoworoczna</div><h2>Wymagania na oceny 1–6</h2></div>
-  <p>Wymagania opisują poziom wiadomości i umiejętności ucznia w sześciu obszarach. Mogą być również wykorzystywane jako punkt odniesienia w informacji opisowej przekazywanej w ciągu roku.</p>
+<div><div class="eyebrow">Klasyfikacja końcoworoczna</div><h2>Wymagania na oceny 1–6</h2></div>
+<p>Wymagania opisują poziom wiadomości i umiejętności ucznia w sześciu obszarach. Mogą być również wykorzystywane jako punkt odniesienia w informacji opisowej przekazywanej w ciągu roku.</p>
 </div>
 <div class="card">
-
-<details open><summary>6 – CELUJĄCY</summary>
+<details><summary>6 – CELUJĄCY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Znakomicie opanowujesz materiał leksykalny i gramatyczny objęty sprawdzianami i kartkówkami. Swobodnie i precyzyjnie stosujesz poznane struktury oraz bogate słownictwo, również w bardziej złożonych zadaniach.</p>
 <h4>Czytanie</h4>
@@ -311,7 +295,6 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Pracujesz bardzo systematycznie, terminowo i samodzielnie. Wykorzystujesz informację zwrotną, poprawiasz błędy i wykazujesz bardzo duże zaangażowanie w rozwijanie swoich umiejętności językowych.</p>
 </details>
-
 <details><summary>5 – BARDZO DOBRY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Bardzo dobrze opanowujesz materiał leksykalny i gramatyczny objęty sprawdzianami i kartkówkami. Poprawnie i swobodnie stosujesz poznane struktury oraz szeroki zakres słownictwa.</p>
@@ -326,7 +309,6 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Pracujesz systematycznie i terminowo. Jesteś przygotowany/przygotowana do zajęć, korzystasz z informacji zwrotnej i podejmujesz działania służące poprawie swoich umiejętności.</p>
 </details>
-
 <details><summary>4 – DOBRY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Dobrze opanowujesz materiał leksykalny i gramatyczny. Zazwyczaj poprawnie stosujesz poznane struktury i słownictwo, choć w bardziej wymagających zadaniach zdarzają Ci się błędy.</p>
@@ -341,7 +323,6 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Zazwyczaj jesteś przygotowany/przygotowana do zajęć i wykonujesz wymagane zadania. Podejmujesz pracę nad błędami i korzystasz z informacji zwrotnej.</p>
 </details>
-
 <details><summary>3 – DOSTATECZNY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Opanowujesz podstawowy zakres materiału leksykalnego i gramatycznego. Stosujesz przede wszystkim proste, często używane struktury i słownictwo. W bardziej złożonych zadaniach popełniasz liczne błędy.</p>
@@ -356,7 +337,6 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Wykonujesz podstawowe wymagane zadania, choć Twoja praca nie zawsze jest systematyczna. Przy odpowiednim wsparciu i wykorzystaniu informacji zwrotnej potrafisz poprawić swoje wyniki.</p>
 </details>
-
 <details><summary>2 – DOPUSZCZAJĄCY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Opanowujesz minimalny zakres podstawowego słownictwa i struktur gramatycznych. Masz trudności z ich samodzielnym zastosowaniem i popełniasz liczne błędy, ale potrafisz wykonać część prostych zadań.</p>
@@ -371,7 +351,6 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Podejmujesz działania pozwalające osiągnąć minimalne wymagania, choć często potrzebujesz wsparcia, dodatkowych wskazówek lub ponownego wykonania zadania.</p>
 </details>
-
 <details><summary>1 – NIEDOSTATECZNY</summary>
 <h4>Gramatyka i słownictwo</h4>
 <p>Nie opanowujesz minimalnego zakresu słownictwa i struktur gramatycznych niezbędnego do wykonania podstawowych zadań. Bardzo liczne błędy uniemożliwiają poprawne zastosowanie poznanego materiału.</p>
@@ -386,132 +365,102 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <h4>Praca i zaangażowanie</h4>
 <p>Nie realizujesz podstawowych wymagań niezbędnych do zaliczenia materiału i nie uzupełniasz wymaganych braków mimo możliwości ich zaliczenia.</p>
 </details>
-
 </div>
 </section>
-
 <section id="materialy">
 <div class="section-head">
-  <div><div class="eyebrow">Materiały do nauki</div><h2>Klasy i grupy</h2></div>
-  <p>Tu będą pojawiały się materiały, powtórki, pliki i linki uporządkowane według klasy i poziomu.</p>
+<div><div class="eyebrow">Materiały do nauki</div><h2>Klasy i grupy</h2></div>
+<p>Wybierz klasę lub Grammar Hub. Materiały otwierają się bezpośrednio w wybranej sekcji.</p>
 </div>
-
-<div class="grid">
-  <div class="card classcard"><span class="tag">KLASA I</span><h3>Klasa 1</h3><p class="muted">Materiały, powtórki, słownictwo i gramatyka.</p></div>
-  <div class="card classcard"><span class="tag">KLASA II</span><h3>Klasa 2</h3><p class="muted">Po otwarciu wybierz: podstawa lub rozszerzenie.</p></div>
-  <div class="card classcard"><span class="tag">KLASA III</span><h3>Klasa 3</h3><p class="muted">Materiały, powtórki i przygotowanie do matury.</p></div>
-  <div class="card classcard"><span class="tag">KLASA IV</span><h3>Klasa 4</h3><p class="muted">Po otwarciu wybierz: podstawa lub rozszerzenie.</p></div>
+<div class="materials-layout"><div class="materials-grid"><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA I</span><h3>Klasa 1</h3></div><p class="material-topic">Present Simple vs Present Continuous</p><span class="material-status">3 materiały</span></summary><div class="material-content">
+<details><summary>Present Simple vs Present Continuous</summary>
+<div class="grammar-grid" style="padding:14px 0 4px">
+<div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png" target="_blank"><img alt="Present Simple vs Present Continuous" class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png"/><div class="grammar-body"><strong>Present Simple vs Present Continuous</strong><span>Porównanie użycia obu czasów</span></div></a></div>
+<div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-simple.png" target="_blank"><img alt="Present Simple" class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-simple.png"/><div class="grammar-body"><strong>Present Simple</strong><span>Budowa, użycie i określenia czasu</span></div></a></div>
+<div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-continuous.png" target="_blank"><img alt="Present Continuous" class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-continuous.png"/><div class="grammar-body"><strong>Present Continuous</strong><span>Budowa, użycie i określenia czasu</span></div></a></div>
 </div>
-
-<div class="card" id="grammar-hub" style="margin-top:18px">
-  <div class="eyebrow">Materiały gramatyczne</div>
-  <h3>Grammar Hub</h3>
-  <p class="muted">Gramatyka w pigułce – notatki, sketchnotatki i materiały do nauki oraz szybkiej powtórki najważniejszych zagadnień gramatycznych.</p>
-  <div class="grammar-grid">
-    <div class="grammar-item"><a href="grammar-hub/article a an.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/article a an.png" alt="A i AN"><div class="grammar-body"><strong>Articles: A / AN</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/the.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/the.png" alt="The"><div class="grammar-body"><strong>THE – definite article</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/zero article.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/zero article.png" alt="Zero article"><div class="grammar-body"><strong>Zero Article</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/present simple.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/present simple.png" alt="Present Simple"><div class="grammar-body"><strong>Present Simple</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/present continuous.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/present continuous.png" alt="Present Continuous"><div class="grammar-body"><strong>Present Continuous</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/perfect simple.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/perfect simple.png" alt="Present Perfect"><div class="grammar-body"><strong>Present Perfect</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/past i perfect.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/past i perfect.png" alt="Past Simple i Present Perfect"><div class="grammar-body"><strong>Past Simple vs Present Perfect</strong><span>Oś czasu</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/past simple and continuous.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/past simple and continuous.png" alt="Past Simple i Past Continuous"><div class="grammar-body"><strong>Past Simple vs Past Continuous</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/future.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/future.png" alt="Future Forms"><div class="grammar-body"><strong>Future Forms</strong><span>will / going to / Present Simple / Present Continuous</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/tenses revision.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/tenses revision.png" alt="Tenses revision"><div class="grammar-body"><strong>Tenses – Revision</strong><span>Powtórka czasów</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/conditionals.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/conditionals.png" alt="Conditionals"><div class="grammar-body"><strong>Conditionals 0–3</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/mixed conditional.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/mixed conditional.png" alt="Mixed Conditionals"><div class="grammar-body"><strong>Mixed Conditionals</strong><span>2nd + 3rd / 3rd + 2nd</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/little few.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/little few.png" alt="Few little"><div class="grammar-body"><strong>A few / Few / A little / Little</strong><span>Sketchnotatka</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/stopniowanie 2.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/stopniowanie 2.png" alt="Stopniowanie przymiotników"><div class="grammar-body"><strong>Comparatives &amp; Superlatives</strong><span>Zasady stopniowania</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/stopniowanie.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/stopniowanie.png" alt="Wyjątki stopniowanie"><div class="grammar-body"><strong>Comparatives &amp; Superlatives – exceptions</strong><span>Wyjątki</span></div></a></div>
-    <div class="grammar-item"><a href="grammar-hub/so - such.png" target="_blank"><img class="grammar-thumb" src="grammar-hub/so - such.png" alt="So such"><div class="grammar-body"><strong>SO / SUCH</strong><span>Sketchnotatka</span></div></a></div>
-
-    <div class="grammar-item pdf-item"><a href="grammar-hub/past perfect.pdf" target="_blank"><span class="tag">PDF</span><strong>Past Perfect</strong><p>Oś czasu i przykłady użycia.</p></a></div>
-    <div class="grammar-item pdf-item"><a href="grammar-hub/used to.pdf" target="_blank"><span class="tag">PDF</span><strong>Used to / Be used to / Get used to</strong><p>Znaczenie, budowa i przykłady.</p></a></div>
-    <div class="grammar-item pdf-item"><a href="grammar-hub/reported.pdf" target="_blank"><span class="tag">PDF</span><strong>Reported Speech</strong><p>Zmiana czasów i czasowników modalnych.</p></a></div>
-    <div class="grammar-item pdf-item"><a href="grammar-hub/reporting verbs-kopia.pdf" target="_blank"><span class="tag">PDF</span><strong>Reporting Verbs</strong><p>Najważniejsze konstrukcje i przykłady.</p></a></div>
-    <div class="grammar-item pdf-item"><a href="grammar-hub/relative.pdf" target="_blank"><span class="tag">PDF</span><strong>Relative Pronouns</strong><p>Who, which, where, that i inne zaimki względne.</p></a></div>
-    <div class="grammar-item pdf-item"><a href="grammar-hub/question tags.pdf" target="_blank"><span class="tag">PDF</span><strong>Question Tags</strong><p>Najważniejsze zasady i wyjątki.</p></a></div>
-  </div>
+</details>
+</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA II</span><h3>Klasa 2</h3></div><p class="material-topic">Podstawa · Rozszerzenie</p><span class="material-status">Materiały wkrótce</span></summary><div class="material-content">
+<details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
+<details><summary>Rozszerzenie</summary><p>Materiały pojawią się tutaj.</p></details>
+</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA III</span><h3>Klasa 3</h3></div><p class="material-topic">Reported Speech and Reporting Verbs · Unit 4 — Word Formation</p><span class="material-status">Materiały i PDF-y</span></summary><div class="material-content">
+<details><summary>Reported Speech and Reporting Verbs</summary>
+<div class="grammar-grid" style="padding:14px 0 4px">
+<div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Direct &amp; Indirect Speech - table + KWT exercises.pdf" target="_blank"><span class="tag">PDF</span><strong>Direct &amp; Indirect Speech</strong><p>Tabela + Key Word Transformation.</p></a></div>
+<div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Introductory Verbs in Reported Speech.pdf" target="_blank"><span class="tag">PDF</span><strong>Introductory Verbs in Reported Speech</strong><p>Reporting verbs: konstrukcje, przykłady i ćwiczenia.</p></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" target="_blank"><img alt="Past Simple → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>found → had found</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" target="_blank"><img alt="Present Perfect → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png"/><div class="grammar-body"><strong>Present Perfect → Past Perfect</strong><span>have lost → had lost</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/can-to-could.png" target="_blank"><img alt="CAN → COULD" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/can-to-could.png"/><div class="grammar-body"><strong>CAN → COULD</strong><span>can → could</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/must-to-had-to.png" target="_blank"><img alt="MUST → HAD TO" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/must-to-had-to.png"/><div class="grammar-body"><strong>MUST → HAD TO</strong><span>must → had to</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" target="_blank"><img alt="Past Simple → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>wrote → had written</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" target="_blank"><img alt="Present Continuous → Past Continuous" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png"/><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am working → was working</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" target="_blank"><img alt="Present Continuous → Past Continuous" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png"/><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am painting → was painting</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" target="_blank"><img alt="Present Simple → Past Simple" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png"/><div class="grammar-body"><strong>Present Simple → Past Simple</strong><span>work → worked</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" target="_blank"><img alt="Present Simple → Past Simple (to be)" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png"/><div class="grammar-body"><strong>Present Simple → Past Simple (to be)</strong><span>am/is/are → was/were</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" target="_blank"><img alt="Past Simple → Past Perfect (to be)" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect (to be)</strong><span>was/were → had been</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/will-to-would.png" target="_blank"><img alt="WILL → WOULD" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/will-to-would.png"/><div class="grammar-body"><strong>WILL → WOULD</strong><span>will → would</span></div></a></div>
 </div>
-
-<div class="card" style="margin-top:18px">
-<details><summary>Klasa 1 — materiały</summary>
-  <div style="padding:0 0 14px 14px">
-    <details><summary>Present Simple vs Present Continuous</summary>
-      <div class="grammar-grid" style="padding:14px 0 4px">
-        <div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png" target="_blank"><img class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png" alt="Present Simple vs Present Continuous"><div class="grammar-body"><strong>Present Simple vs Present Continuous</strong><span>Porównanie użycia obu czasów</span></div></a></div>
-        <div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-simple.png" target="_blank"><img class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-simple.png" alt="Present Simple"><div class="grammar-body"><strong>Present Simple</strong><span>Budowa, użycie i określenia czasu</span></div></a></div>
-        <div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-continuous.png" target="_blank"><img class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-continuous.png" alt="Present Continuous"><div class="grammar-body"><strong>Present Continuous</strong><span>Budowa, użycie i określenia czasu</span></div></a></div>
-      </div>
-    </details>
-  </div>
 </details>
-<details><summary>Klasa 2 — materiały</summary>
-  <div style="padding:0 0 14px 14px">
-    <details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
-    <details><summary>Rozszerzenie</summary><p>Materiały pojawią się tutaj.</p></details>
-  </div>
+<details><summary>Unit 4 — Word Formation</summary>
+<div class="grammar-grid" style="padding:14px 0 4px">
+<div class="grammar-item pdf-item"><a href="materials/unit-4-word-formation/Word Formation - Nouns.pdf" target="_blank"><span class="tag">PDF</span><strong>Word Formation – Nouns</strong><p>Tworzenie rzeczowników – lista słów z polskimi tłumaczeniami.</p></a></div>
+</div>
 </details>
-<details><summary>Klasa 3 — materiały</summary>
-  <div style="padding:0 0 14px 14px">
-    <details><summary>Reported Speech and Reporting Verbs</summary>
-      <div class="grammar-grid" style="padding:14px 0 4px">
-        <div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Direct &amp; Indirect Speech - table + KWT exercises.pdf" target="_blank"><span class="tag">PDF</span><strong>Direct &amp; Indirect Speech</strong><p>Tabela + Key Word Transformation.</p></a></div>
-        <div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Introductory Verbs in Reported Speech.pdf" target="_blank"><span class="tag">PDF</span><strong>Introductory Verbs in Reported Speech</strong><p>Reporting verbs: konstrukcje, przykłady i ćwiczenia.</p></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" alt="Past Simple → Past Perfect"><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>found → had found</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" alt="Present Perfect → Past Perfect"><div class="grammar-body"><strong>Present Perfect → Past Perfect</strong><span>have lost → had lost</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/can-to-could.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/can-to-could.png" alt="CAN → COULD"><div class="grammar-body"><strong>CAN → COULD</strong><span>can → could</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/must-to-had-to.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/must-to-had-to.png" alt="MUST → HAD TO"><div class="grammar-body"><strong>MUST → HAD TO</strong><span>must → had to</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" alt="Past Simple → Past Perfect"><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>wrote → had written</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" alt="Present Continuous → Past Continuous"><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am working → was working</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" alt="Present Continuous → Past Continuous"><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am painting → was painting</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" alt="Present Simple → Past Simple"><div class="grammar-body"><strong>Present Simple → Past Simple</strong><span>work → worked</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" alt="Present Simple → Past Simple (to be)"><div class="grammar-body"><strong>Present Simple → Past Simple (to be)</strong><span>am/is/are → was/were</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" alt="Past Simple → Past Perfect (to be)"><div class="grammar-body"><strong>Past Simple → Past Perfect (to be)</strong><span>was/were → had been</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/will-to-would.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/will-to-would.png" alt="WILL → WOULD"><div class="grammar-body"><strong>WILL → WOULD</strong><span>will → would</span></div></a></div>
-      </div>
-    </details>
-    <details><summary>Unit 4 — Word Formation</summary>
-      <div class="grammar-grid" style="padding:14px 0 4px">
-        <div class="grammar-item pdf-item"><a href="materials/unit-4-word-formation/Word Formation - Nouns.pdf" target="_blank"><span class="tag">PDF</span><strong>Word Formation – Nouns</strong><p>Tworzenie rzeczowników – lista słów z polskimi tłumaczeniami.</p></a></div>
-      </div>
-    </details>
-  </div>
+</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA IV</span><h3>Klasa 4</h3></div><p class="material-topic">Podstawa · Rozszerzenie</p><span class="material-status">Reported Speech + Word Formation</span></summary><div class="material-content">
+<details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
+<details><summary>Rozszerzenie</summary>
+<div style="padding:0 0 14px 14px">
+<details><summary>Reported Speech and Reporting Verbs</summary>
+<div class="grammar-grid" style="padding:14px 0 4px">
+<div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Direct &amp; Indirect Speech - table + KWT exercises.pdf" target="_blank"><span class="tag">PDF</span><strong>Direct &amp; Indirect Speech</strong><p>Tabela + Key Word Transformation.</p></a></div>
+<div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Introductory Verbs in Reported Speech.pdf" target="_blank"><span class="tag">PDF</span><strong>Introductory Verbs in Reported Speech</strong><p>Reporting verbs: konstrukcje, przykłady i ćwiczenia.</p></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" target="_blank"><img alt="Past Simple → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>found → had found</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" target="_blank"><img alt="Present Perfect → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png"/><div class="grammar-body"><strong>Present Perfect → Past Perfect</strong><span>have lost → had lost</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/can-to-could.png" target="_blank"><img alt="CAN → COULD" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/can-to-could.png"/><div class="grammar-body"><strong>CAN → COULD</strong><span>can → could</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/must-to-had-to.png" target="_blank"><img alt="MUST → HAD TO" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/must-to-had-to.png"/><div class="grammar-body"><strong>MUST → HAD TO</strong><span>must → had to</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" target="_blank"><img alt="Past Simple → Past Perfect" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>wrote → had written</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" target="_blank"><img alt="Present Continuous → Past Continuous" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png"/><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am working → was working</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" target="_blank"><img alt="Present Continuous → Past Continuous" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png"/><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am painting → was painting</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" target="_blank"><img alt="Present Simple → Past Simple" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png"/><div class="grammar-body"><strong>Present Simple → Past Simple</strong><span>work → worked</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" target="_blank"><img alt="Present Simple → Past Simple (to be)" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png"/><div class="grammar-body"><strong>Present Simple → Past Simple (to be)</strong><span>am/is/are → was/were</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" target="_blank"><img alt="Past Simple → Past Perfect (to be)" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png"/><div class="grammar-body"><strong>Past Simple → Past Perfect (to be)</strong><span>was/were → had been</span></div></a></div>
+<div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/will-to-would.png" target="_blank"><img alt="WILL → WOULD" class="grammar-thumb" src="materials/reported-speech-reporting-verbs/will-to-would.png"/><div class="grammar-body"><strong>WILL → WOULD</strong><span>will → would</span></div></a></div>
+</div>
 </details>
-<details><summary>Klasa 4 — materiały</summary>
-  <div style="padding:0 0 14px 14px">
-    <details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
-    <details><summary>Rozszerzenie</summary>
-      <div style="padding:0 0 14px 14px">
-        <details><summary>Reported Speech and Reporting Verbs</summary>
-      <div class="grammar-grid" style="padding:14px 0 4px">
-        <div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Direct &amp; Indirect Speech - table + KWT exercises.pdf" target="_blank"><span class="tag">PDF</span><strong>Direct &amp; Indirect Speech</strong><p>Tabela + Key Word Transformation.</p></a></div>
-        <div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Introductory Verbs in Reported Speech.pdf" target="_blank"><span class="tag">PDF</span><strong>Introductory Verbs in Reported Speech</strong><p>Reporting verbs: konstrukcje, przykłady i ćwiczenia.</p></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-cat.png" alt="Past Simple → Past Perfect"><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>found → had found</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-perfect-to-past-perfect.png" alt="Present Perfect → Past Perfect"><div class="grammar-body"><strong>Present Perfect → Past Perfect</strong><span>have lost → had lost</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/can-to-could.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/can-to-could.png" alt="CAN → COULD"><div class="grammar-body"><strong>CAN → COULD</strong><span>can → could</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/must-to-had-to.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/must-to-had-to.png" alt="MUST → HAD TO"><div class="grammar-body"><strong>MUST → HAD TO</strong><span>must → had to</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-postcards.png" alt="Past Simple → Past Perfect"><div class="grammar-body"><strong>Past Simple → Past Perfect</strong><span>wrote → had written</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-comic.png" alt="Present Continuous → Past Continuous"><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am working → was working</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-continuous-to-past-continuous-painting.png" alt="Present Continuous → Past Continuous"><div class="grammar-body"><strong>Present Continuous → Past Continuous</strong><span>am painting → was painting</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-work.png" alt="Present Simple → Past Simple"><div class="grammar-body"><strong>Present Simple → Past Simple</strong><span>work → worked</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/present-simple-to-past-simple-to-be.png" alt="Present Simple → Past Simple (to be)"><div class="grammar-body"><strong>Present Simple → Past Simple (to be)</strong><span>am/is/are → was/were</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/past-simple-to-past-perfect-to-be.png" alt="Past Simple → Past Perfect (to be)"><div class="grammar-body"><strong>Past Simple → Past Perfect (to be)</strong><span>was/were → had been</span></div></a></div>
-          <div class="grammar-item"><a href="materials/reported-speech-reporting-verbs/will-to-would.png" target="_blank"><img class="grammar-thumb" src="materials/reported-speech-reporting-verbs/will-to-would.png" alt="WILL → WOULD"><div class="grammar-body"><strong>WILL → WOULD</strong><span>will → would</span></div></a></div>
-      </div>
-    </details>
-        <details><summary>Unit 4 — Word Formation</summary>
-      <div class="grammar-grid" style="padding:14px 0 4px">
-        <div class="grammar-item pdf-item"><a href="materials/unit-4-word-formation/Word Formation - Nouns.pdf" target="_blank"><span class="tag">PDF</span><strong>Word Formation – Nouns</strong><p>Tworzenie rzeczowników – lista słów z polskimi tłumaczeniami.</p></a></div>
-      </div>
-    </details>
-      </div>
-    </details>
-  </div>
+<details><summary>Unit 4 — Word Formation</summary>
+<div class="grammar-grid" style="padding:14px 0 4px">
+<div class="grammar-item pdf-item"><a href="materials/unit-4-word-formation/Word Formation - Nouns.pdf" target="_blank"><span class="tag">PDF</span><strong>Word Formation – Nouns</strong><p>Tworzenie rzeczowników – lista słów z polskimi tłumaczeniami.</p></a></div>
+</div>
 </details>
 </div>
+</details>
+</div></details></div><details class="grammar-panel" id="grammar-hub"><summary><div><div class="eyebrow">Materiały gramatyczne</div><h3>Grammar Hub</h3><p class="muted">Gramatyka dla wszystkich klas — notatki, sketchnotatki, PDF-y i szybkie powtórki.</p></div><span class="hub-open">Otwórz Grammar Hub</span></summary><div class="grammar-panel-content"><div class="grammar-grid">
+<div class="grammar-item"><a href="grammar-hub/article a an.png" target="_blank"><img alt="A i AN" class="grammar-thumb" src="grammar-hub/article a an.png"/><div class="grammar-body"><strong>Articles: A / AN</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/the.png" target="_blank"><img alt="The" class="grammar-thumb" src="grammar-hub/the.png"/><div class="grammar-body"><strong>THE – definite article</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/zero article.png" target="_blank"><img alt="Zero article" class="grammar-thumb" src="grammar-hub/zero article.png"/><div class="grammar-body"><strong>Zero Article</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/present simple.png" target="_blank"><img alt="Present Simple" class="grammar-thumb" src="grammar-hub/present simple.png"/><div class="grammar-body"><strong>Present Simple</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/present continuous.png" target="_blank"><img alt="Present Continuous" class="grammar-thumb" src="grammar-hub/present continuous.png"/><div class="grammar-body"><strong>Present Continuous</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/perfect simple.png" target="_blank"><img alt="Present Perfect" class="grammar-thumb" src="grammar-hub/perfect simple.png"/><div class="grammar-body"><strong>Present Perfect</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/past i perfect.png" target="_blank"><img alt="Past Simple i Present Perfect" class="grammar-thumb" src="grammar-hub/past i perfect.png"/><div class="grammar-body"><strong>Past Simple vs Present Perfect</strong><span>Oś czasu</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/past simple and continuous.png" target="_blank"><img alt="Past Simple i Past Continuous" class="grammar-thumb" src="grammar-hub/past simple and continuous.png"/><div class="grammar-body"><strong>Past Simple vs Past Continuous</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/future.png" target="_blank"><img alt="Future Forms" class="grammar-thumb" src="grammar-hub/future.png"/><div class="grammar-body"><strong>Future Forms</strong><span>will / going to / Present Simple / Present Continuous</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/tenses revision.png" target="_blank"><img alt="Tenses revision" class="grammar-thumb" src="grammar-hub/tenses revision.png"/><div class="grammar-body"><strong>Tenses – Revision</strong><span>Powtórka czasów</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/conditionals.png" target="_blank"><img alt="Conditionals" class="grammar-thumb" src="grammar-hub/conditionals.png"/><div class="grammar-body"><strong>Conditionals 0–3</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/mixed conditional.png" target="_blank"><img alt="Mixed Conditionals" class="grammar-thumb" src="grammar-hub/mixed conditional.png"/><div class="grammar-body"><strong>Mixed Conditionals</strong><span>2nd + 3rd / 3rd + 2nd</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/little few.png" target="_blank"><img alt="Few little" class="grammar-thumb" src="grammar-hub/little few.png"/><div class="grammar-body"><strong>A few / Few / A little / Little</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/stopniowanie 2.png" target="_blank"><img alt="Stopniowanie przymiotników" class="grammar-thumb" src="grammar-hub/stopniowanie 2.png"/><div class="grammar-body"><strong>Comparatives &amp; Superlatives</strong><span>Zasady stopniowania</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/stopniowanie.png" target="_blank"><img alt="Wyjątki stopniowanie" class="grammar-thumb" src="grammar-hub/stopniowanie.png"/><div class="grammar-body"><strong>Comparatives &amp; Superlatives – exceptions</strong><span>Wyjątki</span></div></a></div>
+<div class="grammar-item"><a href="grammar-hub/so - such.png" target="_blank"><img alt="So such" class="grammar-thumb" src="grammar-hub/so - such.png"/><div class="grammar-body"><strong>SO / SUCH</strong><span>Sketchnotatka</span></div></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/past perfect.pdf" target="_blank"><span class="tag">PDF</span><strong>Past Perfect</strong><p>Oś czasu i przykłady użycia.</p></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/used to.pdf" target="_blank"><span class="tag">PDF</span><strong>Used to / Be used to / Get used to</strong><p>Znaczenie, budowa i przykłady.</p></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/reported.pdf" target="_blank"><span class="tag">PDF</span><strong>Reported Speech</strong><p>Zmiana czasów i czasowników modalnych.</p></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/reporting verbs-kopia.pdf" target="_blank"><span class="tag">PDF</span><strong>Reporting Verbs</strong><p>Najważniejsze konstrukcje i przykłady.</p></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/relative.pdf" target="_blank"><span class="tag">PDF</span><strong>Relative Pronouns</strong><p>Who, which, where, that i inne zaimki względne.</p></a></div>
+<div class="grammar-item pdf-item"><a href="grammar-hub/question tags.pdf" target="_blank"><span class="tag">PDF</span><strong>Question Tags</strong><p>Najważniejsze zasady i wyjątki.</p></a></div>
+</div></div></details></div>
+
+
 </section>
-
 <section>
 <div class="card">
 <h3>Dodatkowe informacje</h3>
@@ -520,10 +469,8 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <p><strong>Ocena końcoworoczna nie jest wynikiem prostego przeliczenia ocen opisowych, wyników procentowych ani punktowych.</strong> Ustalana jest na podstawie stopnia spełnienia wymagań edukacyjnych, całorocznego poziomu wiedzy i umiejętności oraz zaangażowania ucznia.</p>
 </div>
 </section>
-
 </div>
 </main>
-
 <footer><div class="wrap">Realna Angielski – Katarzyna Dąbrowska • rok szkolny 2026/2027</div></footer>
 </body>
 </html>
