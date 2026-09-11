@@ -58,28 +58,24 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 @media(max-width:860px){.intro{grid-column:span 12}.classcard{grid-column:span 6}.half{grid-column:span 12}}
 @media(max-width:560px){.classcard{grid-column:span 12}.navlinks{display:none}.hero{padding-top:48px}}
 
-.materials-layout{margin-top:4px}
-.materials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.material-panel,.grammar-panel{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
-.material-panel>summary,.grammar-panel>summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;flex-direction:column;gap:8px;position:relative}
-.material-panel>summary::-webkit-details-marker,.grammar-panel>summary::-webkit-details-marker{display:none}
-.material-panel>summary:after{content:'+';position:absolute;right:22px;top:22px;width:30px;height:30px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:20px;font-weight:700;color:#64748b}
-.material-panel[open]>summary:after{content:'–'}
-.material-summary-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-right:42px}
-.material-summary-top h3{margin:0;font-size:22px}
-.material-topic{margin:2px 40px 0 0;color:var(--ink);font-weight:700;line-height:1.45}
-.material-status{font-size:13px;color:var(--muted);font-weight:650}
-.material-content{border-top:1px solid var(--line);padding:14px 24px 24px}
-.material-content>details{margin-top:10px}
-.grammar-panel{margin-top:18px}
-.grammar-panel>summary{flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:24px 26px}
-.grammar-panel>summary h3{margin:2px 0 4px;font-size:25px}
-.grammar-panel>summary p{margin:0;max-width:760px}
-.hub-open{flex:0 0 auto;background:var(--ink);color:#fff;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:800}
-.grammar-panel[open] .hub-open{font-size:0}
-.grammar-panel[open] .hub-open:after{content:'Zamknij';font-size:13px}
-.grammar-panel-content{border-top:1px solid var(--line);padding:22px 26px 26px}
-@media(max-width:760px){.materials-grid{grid-template-columns:1fr}.grammar-panel>summary{align-items:flex-start;flex-direction:column}.hub-open{margin-top:2px}}
+/* Final materials layout: clickable class tiles + separate Grammar Hub */
+.materials-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}
+.class-tile{border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.class-tile>summary{border:0;padding:22px 23px 20px;min-height:205px;display:block}
+.class-tile>summary h3{margin:.7em 0 .7em;font-size:21px}
+.class-tile>summary p{margin:0;color:var(--muted);font-weight:500;line-height:1.55}
+.class-tile>summary:after{content:'Otwórz materiały ↓';display:block;margin-top:16px;font-size:12px;font-weight:800;color:#64748b;letter-spacing:.02em}
+.class-tile[open]>summary:after{content:'Zamknij materiały ↑'}
+.class-tile-content{border-top:1px solid var(--line);padding:0 22px 20px}
+.class-tile-content>details:first-child{border-top:0}
+.hub-tile{margin-top:20px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.hub-tile>summary{padding:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;border:0}
+.hub-tile>summary h3{margin:.25em 0;font-size:24px}.hub-tile>summary p{margin:.3em 0 0;color:var(--muted);font-weight:500}
+.hub-action{white-space:nowrap;background:var(--soft);padding:9px 12px;border-radius:999px;font-size:13px;color:#475569}
+.hub-tile[open] .hub-action{font-size:0}.hub-tile[open] .hub-action:after{content:'Zamknij ↑';font-size:13px}
+.hub-content{border-top:1px solid var(--line);padding:0 24px 24px}
+@media(max-width:980px){.materials-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.materials-grid{grid-template-columns:1fr}.class-tile>summary{min-height:auto}.hub-tile>summary{align-items:flex-start;flex-direction:column}.hub-action{white-space:normal}}
 </style>
 </head>
 <body>
@@ -370,9 +366,10 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <section id="materialy">
 <div class="section-head">
 <div><div class="eyebrow">Materiały do nauki</div><h2>Klasy i grupy</h2></div>
-<p>Wybierz klasę lub Grammar Hub. Materiały otwierają się bezpośrednio w wybranej sekcji.</p>
+<p>Wybierz klasę lub Grammar Hub. Materiały rozwiną się dokładnie w wybranym miejscu.</p>
 </div>
-<div class="materials-layout"><div class="materials-grid"><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA I</span><h3>Klasa 1</h3></div><p class="material-topic">Present Simple vs Present Continuous</p><span class="material-status">3 materiały</span></summary><div class="material-content">
+<div class="materials-grid"><details class="class-tile"><summary><span class="tag">KLASA I</span><h3>Klasa 1</h3><p>Present Simple vs Present Continuous</p></summary><div class="class-tile-content">
+<div style="padding:0 0 14px 14px">
 <details><summary>Present Simple vs Present Continuous</summary>
 <div class="grammar-grid" style="padding:14px 0 4px">
 <div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png" target="_blank"><img alt="Present Simple vs Present Continuous" class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-simple-vs-present-continuous.png"/><div class="grammar-body"><strong>Present Simple vs Present Continuous</strong><span>Porównanie użycia obu czasów</span></div></a></div>
@@ -380,10 +377,14 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <div class="grammar-item"><a href="klasa-1/present-simple-vs-present-continuous/present-continuous.png" target="_blank"><img alt="Present Continuous" class="grammar-thumb" src="klasa-1/present-simple-vs-present-continuous/present-continuous.png"/><div class="grammar-body"><strong>Present Continuous</strong><span>Budowa, użycie i określenia czasu</span></div></a></div>
 </div>
 </details>
-</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA II</span><h3>Klasa 2</h3></div><p class="material-topic">Podstawa · Rozszerzenie</p><span class="material-status">Materiały wkrótce</span></summary><div class="material-content">
+</div>
+</div></details><details class="class-tile"><summary><span class="tag">KLASA II</span><h3>Klasa 2</h3><p>Podstawa · Rozszerzenie</p></summary><div class="class-tile-content">
+<div style="padding:0 0 14px 14px">
 <details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
 <details><summary>Rozszerzenie</summary><p>Materiały pojawią się tutaj.</p></details>
-</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA III</span><h3>Klasa 3</h3></div><p class="material-topic">Reported Speech and Reporting Verbs · Unit 4 — Word Formation</p><span class="material-status">Materiały i PDF-y</span></summary><div class="material-content">
+</div>
+</div></details><details class="class-tile"><summary><span class="tag">KLASA III</span><h3>Klasa 3</h3><p>Reported Speech and Reporting Verbs · Unit 4 — Word Formation</p></summary><div class="class-tile-content">
+<div style="padding:0 0 14px 14px">
 <details><summary>Reported Speech and Reporting Verbs</summary>
 <div class="grammar-grid" style="padding:14px 0 4px">
 <div class="grammar-item pdf-item"><a href="materials/reported-speech-reporting-verbs/Direct &amp; Indirect Speech - table + KWT exercises.pdf" target="_blank"><span class="tag">PDF</span><strong>Direct &amp; Indirect Speech</strong><p>Tabela + Key Word Transformation.</p></a></div>
@@ -406,7 +407,9 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <div class="grammar-item pdf-item"><a href="materials/unit-4-word-formation/Word Formation - Nouns.pdf" target="_blank"><span class="tag">PDF</span><strong>Word Formation – Nouns</strong><p>Tworzenie rzeczowników – lista słów z polskimi tłumaczeniami.</p></a></div>
 </div>
 </details>
-</div></details><details class="material-panel"><summary><div class="material-summary-top"><span class="tag">KLASA IV</span><h3>Klasa 4</h3></div><p class="material-topic">Podstawa · Rozszerzenie</p><span class="material-status">Reported Speech + Word Formation</span></summary><div class="material-content">
+</div>
+</div></details><details class="class-tile"><summary><span class="tag">KLASA IV</span><h3>Klasa 4</h3><p>Podstawa · Rozszerzenie</p></summary><div class="class-tile-content">
+<div style="padding:0 0 14px 14px">
 <details><summary>Podstawa</summary><p>Materiały pojawią się tutaj.</p></details>
 <details><summary>Rozszerzenie</summary>
 <div style="padding:0 0 14px 14px">
@@ -434,7 +437,9 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 </details>
 </div>
 </details>
-</div></details></div><details class="grammar-panel" id="grammar-hub"><summary><div><div class="eyebrow">Materiały gramatyczne</div><h3>Grammar Hub</h3><p class="muted">Gramatyka dla wszystkich klas — notatki, sketchnotatki, PDF-y i szybkie powtórki.</p></div><span class="hub-open">Otwórz Grammar Hub</span></summary><div class="grammar-panel-content"><div class="grammar-grid">
+</div>
+</div></details></div>
+<details class="hub-tile" id="grammar-hub"><summary><div><div class="eyebrow">Materiały gramatyczne</div><h3>Grammar Hub</h3><p>Gramatyka w pigułce – notatki, sketchnotatki i materiały do nauki oraz szybkiej powtórki najważniejszych zagadnień gramatycznych.</p></div><span class="hub-action">Otwórz Grammar Hub ↓</span></summary><div class="hub-content"><div class="grammar-grid">
 <div class="grammar-item"><a href="grammar-hub/article a an.png" target="_blank"><img alt="A i AN" class="grammar-thumb" src="grammar-hub/article a an.png"/><div class="grammar-body"><strong>Articles: A / AN</strong><span>Sketchnotatka</span></div></a></div>
 <div class="grammar-item"><a href="grammar-hub/the.png" target="_blank"><img alt="The" class="grammar-thumb" src="grammar-hub/the.png"/><div class="grammar-body"><strong>THE – definite article</strong><span>Sketchnotatka</span></div></a></div>
 <div class="grammar-item"><a href="grammar-hub/zero article.png" target="_blank"><img alt="Zero article" class="grammar-thumb" src="grammar-hub/zero article.png"/><div class="grammar-body"><strong>Zero Article</strong><span>Sketchnotatka</span></div></a></div>
@@ -457,8 +462,7 @@ footer{padding:42px 0 55px;color:var(--muted);font-size:14px}
 <div class="grammar-item pdf-item"><a href="grammar-hub/reporting verbs-kopia.pdf" target="_blank"><span class="tag">PDF</span><strong>Reporting Verbs</strong><p>Najważniejsze konstrukcje i przykłady.</p></a></div>
 <div class="grammar-item pdf-item"><a href="grammar-hub/relative.pdf" target="_blank"><span class="tag">PDF</span><strong>Relative Pronouns</strong><p>Who, which, where, that i inne zaimki względne.</p></a></div>
 <div class="grammar-item pdf-item"><a href="grammar-hub/question tags.pdf" target="_blank"><span class="tag">PDF</span><strong>Question Tags</strong><p>Najważniejsze zasady i wyjątki.</p></a></div>
-</div></div></details></div>
-
+</div></div></details>
 
 </section>
 <section>
